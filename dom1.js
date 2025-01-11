@@ -45,12 +45,32 @@
 // }
 // console.log(utility());
  
-let obj={
-    heading:"head"
+// let obj={
+//     heading:"head"
+// }
+// async function utility(){
+//     let content=await fetch('https://jsonplaceholder.typicode.com/posts/1')
+//     let output =  await content.json();
+//     console.log(output);
+// }
+// console.log(utility);
+
+async function helper(){
+    let options = {
+        method: "POST",
+        body: JSON.stringify({
+        userId: 1,
+        title: "Fix my bug"
+    }),
+    };
+    let content = fetch("https://jsonplaceholder.typicode.com/todos",options);
+    let response=content.json;
+    return response;
 }
+
+
 async function utility(){
-    let content=await fetch('https://jsonplaceholder.typicode.com/posts/1')
-    let output =  await content.json();
-    console.log(output);
+    let asn = helper;
+    console.log(ans);
 }
-console.log(utility);
+console.log(helper)
