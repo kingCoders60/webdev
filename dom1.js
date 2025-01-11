@@ -11,6 +11,7 @@
 // promise.catch((error)=>{console.log("Received an error")})
 // console.log('phela'); 
 
+//Example of prmomise chaining
 let wada1 = new Promise(function(resolve,reject){
     setTimeout(()=>{console.log('SetTime  Out started!');},2000);
     resolve(true);
