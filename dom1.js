@@ -27,23 +27,30 @@
 // })
 // output.then((value)=>console.log(value)); 
  
-async function utility(){
-    let maha = new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            resolve("Delhi me garmi hai")
-        },1000);
-    });   
+// async function utility(){
+//     let maha = new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve("Delhi me garmi hai")
+//         },1000);
+//     });   
     
-    let wb = new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            resolve("wb is cool")
-        },5000);
-    });
-    let m=await maha;
-    let w=await wb;
-    return [m,w]; 
+//     let wb = new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             resolve("wb is cool")
+//         },5000);
+//     });
+//     let m=await maha;
+//     let w=await wb;
+//     return [m,w]; 
+// }
+// console.log(utility());
+ 
+let obj={
+    heading:"head"
 }
-console.log(utility());
-   
-
-
+async function utility(){
+    let content=await fetch('https://jsonplaceholder.typicode.com/posts/1')
+    let output =  await content.json();
+    console.log(output);
+}
+console.log(utility);
