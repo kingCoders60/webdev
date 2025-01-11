@@ -12,16 +12,36 @@
 // console.log('phela'); 
 
 //Example of prmomise chaining
-let wada1 = new Promise(function(resolve,reject){
-    setTimeout(()=>{console.log('SetTime  Out started!');},2000);
-    resolve(true);
-})
-let output = wada1.then(()=>{
-    let wada2= new Promise(function(resolve,reject){
+
+// let wada1 = new Promise(function(resolve,reject){
+//     setTimeout(()=>{console.log('SetTime  Out started!');},2000);
+//     resolve(true);
+// })
+// let output = wada1.then(()=>{
+//     let wada2= new Promise(function(resolve,reject){
+//         setTimeout(()=>{
+//             resolve("wada2 is also started..")
+//         },3000)
+//     })
+//     return wada2;
+// })
+// output.then((value)=>console.log(value)); 
+async function utility(){
+    let maha = new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            resolve("wada2 is also started..")
-        },3000)
-    })
-    return wada2;
-})
-output.then((value)=>console.log(value)); 
+            resolve("Delhi me garmi hai")
+        },1000);
+    });   
+    
+    let wb = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("wb is cool")
+        },5000);
+    });
+
+    return [maha,wb]; 
+}
+console.log(utility());
+   
+
+
