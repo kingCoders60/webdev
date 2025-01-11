@@ -64,7 +64,6 @@
 function init(){
     let name = "Mozilla";
     function display(){
-        
         console.log(name);
         let name = "Raj";
     }
@@ -77,7 +76,6 @@ dom1.js:69 Uncaught ReferenceError: Cannot access 'name' before initialization
     at display (dom1.js:69:21)
     at init (dom1.js:72:5)
     at dom1.js:74:1
-
 */
 
 
