@@ -26,6 +26,7 @@
 //     return wada2;
 // })
 // output.then((value)=>console.log(value)); 
+ 
 async function utility(){
     let maha = new Promise((resolve,reject)=>{
         setTimeout(()=>{
@@ -38,8 +39,9 @@ async function utility(){
             resolve("wb is cool")
         },5000);
     });
-
-    return [maha,wb]; 
+    let m=await maha;
+    let w=await wb;
+    return [m,w]; 
 }
 console.log(utility());
    
