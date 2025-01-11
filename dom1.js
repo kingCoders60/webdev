@@ -55,22 +55,29 @@
 // }
 // console.log(utility);
 
-async function helper(){
-    let options = {
-        method: "POST",
-        body: JSON.stringify({
-        userId: 1,
-        title: "Fix my bug"
-    }),
-    };
-    let content = fetch("https://jsonplaceholder.typicode.com/todos",options);
-    let response=content.json;
-    return response;
-}
+// 
 
 
-async function utility(){
-    let asn = helper;
-    console.log(ans);
+// closures
+
+/*let name = "Sher";
+function init(){
+    let name = "Mozilla";
+    function display(){
+        
+        console.log(name);
+        let name = "Raj";
+    }
+    display()
 }
-console.log(helper)
+init();
+
+Error
+dom1.js:69 Uncaught ReferenceError: Cannot access 'name' before initialization
+    at display (dom1.js:69:21)
+    at init (dom1.js:72:5)
+    at dom1.js:74:1
+
+*/
+
+
